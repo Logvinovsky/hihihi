@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>ABZ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-123231
+
+
+<header class="header container">
+    <div class="header__container">
+
+        <div class="logo">
+            <img src="images/logo.svg" alt="logo">
+        </div>
+
+        <div class="header__menu-icon" onclick="switcher()">
+            <a href="#"><img src="images/menu%20icon.svg" alt="menu-icon"></a>
+        </div>
+
+        <div class="hamburger-menu" id="lol">
+            <div class="menu__content">
+                <div class="menu-content__block">
+                    <a href="#" class="menu__link">About me</a>
+                    <a href="#" class="menu__link">Relationships</a>
+                    <a href="#" class="menu__link">Users</a>
+                    <a href="#" class="menu__link">Sign Up</a>
+                    <a href="#" class="menu__link">Terms and Conditions</a>
+                </div>
+
+                <div class="menu-content__block">
+                    <a href="#" class="menu__link">How it works</a>
+                    <a href="#" class="menu__link">Partnership</a>
+                    <a href="#" class="menu__link">Help</a>
+                    <a href="#" class="menu__link">Leave testimonial</a>
+                    <a href="#" class="menu__link">Contact us</a>
+                </div>
+
+                <div class="menu-content__block">
+                    <a href="#" class="menu__link">Articles</a>
+                    <a href="#" class="menu__link">Our news</a>
+                    <a href="#" class="menu__link">Privacy Policy</a>
+                    <a href="#" class="menu__link">Licenses</a>
+                    <a href="#" class="menu__link">Privacy Policy</a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <nav class="nav">
+            <a href="#" class="nav__link">About me</a>
+            <a href="#" class="nav__link">Relationships</a>
+            <a href="#" class="nav__link">Requirements </a>
+            <a href="#" class="nav__link">Users</a>
+            <a href="#" class="nav__link">Sign Up</a>
+        </nav>
+    </div>
+
+</header>
+
+
+
 </body>
+
+
+<script>
+    function switcher() {
+        let element = document.getElementById("lol");
+        element.classList.toggle("hamburger-menu__click");
+    }
+
+</script>
 </html>
