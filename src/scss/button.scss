@@ -1,0 +1,19 @@
+.button__link{
+  color: #fefefe;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.button{
+  display: block;
+  max-width: 210px;
+  line-height: 38px;
+  border-radius: 4px;
+  background-color: #ef5b4c;
+  text-align: center;
+}
+
+.button:hover{
+  background-color: #d24335;
+}
