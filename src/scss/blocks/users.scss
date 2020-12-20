@@ -3,29 +3,7 @@
   background-color: #f9f9f3;;
 }
 
-.block-title{
-  display: flex;
-  flex-direction: column;
-}
-
-.block-title__heading{
-  text-align: center;
-  color: #212529;
-  font-size: 50px;
-  font-weight: 400;
-}
-
-.block-title__subheading{
-  text-align: center;
-  color: #4c4b4b;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  margin-top: 10px;
-}
-
 .users__content{
-  //margin: 0 85px;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -59,7 +37,6 @@
 
 .contact-block__info{
   color: #4c4b4b;
-  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   margin-top: 11px;
@@ -74,10 +51,6 @@
     font-size: 30px;
   }
 
-  .block-title__subheading{
-    font-size: 16px;
-    line-height: 22px;
-  }
 
   .users__content{
     margin-top: 36px;
@@ -107,7 +80,6 @@
   }
 
   .contact-block__info{
-    font-size: 16px;
     line-height: 24px;
     margin-top: 14px;
   }

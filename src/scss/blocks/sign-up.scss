@@ -1,0 +1,150 @@
+.sign-up .section{
+  padding-top: 143px;
+}
+
+.sign-up__container {
+    max-width: 510px;
+    margin: auto;
+  }
+
+.sign-up__form{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 22px 0;
+}
+
+.form__formfield{
+  display: flex;
+  flex-direction: column;
+  margin-top: 27px;
+}
+
+.formfield__label{
+  line-height: 28px;
+}
+
+
+.sign-up__form input[type = 'text'], .file-custom{
+  display: block;
+  max-width: 467px;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+    &::placeholder{
+      color: #b2b9c0;
+      line-height: 28px;
+      padding-left: 10px;
+    }
+}
+
+.number__assistive-text {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.radio-buttons{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.radio-button{
+  --radio-width: 16px;
+  --radio-height: 16px;
+  margin-top: 9px;
+  position: relative;
+}
+
+.radio-button__input{
+  margin: 0;
+  width: var(--radio-width);
+  height: var(--radio-height);
+    &:checked{
+      position: absolute;
+      opacity: 0;
+    }
+}
+
+
+.radio-button__circle{
+  display: none;
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(var(--radio-width) / 2.66);
+    height: calc(var(--radio-height) / 2.66);
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+
+
+.radio-button__input:checked ~ .radio-button__circle{
+  display: inline-block;
+  width: var(--radio-width);
+  height: var(--radio-height);
+  border-radius: 50%;
+  background-color: #007bff;
+    &:after{
+      display: block;
+    }
+}
+
+.radio-button__label{
+  padding-left: 4px;
+}
+
+.file__input{
+  display: none;
+}
+
+.file-custom{
+  position: relative;
+  cursor: pointer;
+    &:before{
+      content: 'Upload your photo';
+      font-size: 14px;
+      position: absolute;
+      color: #b2b9c0;
+      top: 9px;
+      left: 12px;
+    }
+
+      &:after{
+        content: 'Browse';
+        text-align: center;
+        padding-top: 5px;
+        font-size: 14px;
+        position: absolute;
+        top:0;
+        right: 0;
+        display: block;
+        background-color: #f8f7f5;
+        width: 83px;
+        height: 100%;
+        border: 1px solid #d4d9de;
+
+      }
+  &:hover:after{
+    background-color: #d4d9de;
+  }
+}
+
+.sign-up__button{
+  margin: 40px auto 0;
+  width: 210px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+

@@ -140,7 +140,7 @@
             </div>
         </div>
 
-        <div class="users__content"> <!-- contact-list -->
+        <div class="users__content">
 
             <div class="contact-block">
 
@@ -265,14 +265,87 @@
     </div>
 </div>
 
+<div class="sign-up">
+    <div class="section container">
+        <div class="sign-up__container">
+            <div class="block-title">
+                <div class="block-title__heading">
+                    Register to get a work
+                </div>
 
+                <div class="block-title__subheading">
+                    Attention! After successful registration and alert, update the
+                    list of users in the block from the top
+                </div>
+            </div>
+
+            <form action="" class = 'sign-up__form'>
+
+                <div class="form__formfield">
+                    <label for='form__username' class='formfield__label'> Name </label>
+                    <input class = 'formfield__input'  type="text" placeholder="Your name" id='form__username' name='username'>
+                </div>
+
+                <div class="form__formfield">
+                    <label for='form__email' class='formfield__label'> Email</label>
+                    <input class = 'formfield__input' type="text" placeholder="Your email" id='form__email' name='email'>
+                </div>
+
+                <div class="form__formfield">
+                    <label for='form__number' class='formfield__label'>Phone number</label>
+                    <input class = 'formfield__input' type="text" placeholder="+380 XX XXX XX XX" id='form__number' name='number'>
+                    <span class='number__assistive-text'>Enter a phone number in international format</span>
+                </div>
+
+                <div class="form__formfield">
+                    <span class='formfield__label'>Select your position</span>
+                    <div class='radio-buttons'>
+                        <div class="radio-button">
+                            <input type="radio" class='radio-button__input' id='positionChoice1' name='position'>
+                            <span class="radio-button__circle"></span>
+                            <label class='radio-button__label' for="positionChoice1">Frontend developer</label>
+                        </div>
+
+                        <div class="radio-button">
+                            <input type="radio" class='radio-button__input' id='positionChoice2' name='position'>
+                            <span class="radio-button__circle"></span>
+                            <label class='radio-button__label' for='positionChoice2'>Backend developer</label>
+                        </div>
+
+                        <div class="radio-button">
+                            <input type="radio" class='radio-button__input' id='positionChoice3' name='position'>
+                            <span class="radio-button__circle"></span>
+                            <label class='radio-button__label' for='positionChoice3'>Designer</label>
+                        </div>
+
+                        <div class="radio-button">
+                            <input type="radio" class='radio-button__input' id='positionChoice4' name='position'>
+                            <span class="radio-button__circle"></span>
+                            <label class='radio-button__label' for='positionChoice4'>QA</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__formfield">
+                    <div class="file">
+                        <span class='formfield__label'> Photo </span>
+                        <input class='file__input' type="file" id='form__photo' name='photo'>
+                        <label class='file-custom formfield__input' for="form__photo"></label>
+                    </div>
+                </div>
+
+                <input type="submit" class="button button__link sign-up__button" value = 'Sign up now'>
+            </form>
+
+        </div>
+    </div>
+</div>
 
 <footer class="footer container">
     <div class="footer__container" id="#footer">
         <h4 class="footer__text">© abz.agency specially for the test task</h4>
     </div>
 </footer>
-
 </body>
 
 
@@ -281,6 +354,5 @@
         let element = document.getElementById("lol");
         element.classList.toggle("hamburger-menu__click");
     }
-
 </script>
 </html>

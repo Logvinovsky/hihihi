@@ -1,0 +1,17 @@
+.block-title{
+  display: flex;
+  flex-direction: column;
+}
+
+.block-title__heading{
+  text-align: center;
+  color: #212529;
+  font-size: 50px;
+}
+
+.block-title__subheading{
+  text-align: center;
+  color: #4c4b4b;
+  line-height: 22px;
+  margin-top: 10px;
+}

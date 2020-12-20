@@ -12,8 +12,10 @@
   border-radius: 4px;
   background-color: #ef5b4c;
   text-align: center;
+  border: none;
+    &:hover{
+      background-color: #d24335;
+      border: none;
+  }
 }
 
-.button:hover{
-  background-color: #d24335;
-}
