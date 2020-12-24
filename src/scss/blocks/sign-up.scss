@@ -142,7 +142,28 @@
 }
 
 
+@media screen and (max-width: 360px){
+  .sign-up .section{
+    padding-top: 84px;
+  }
 
+  .sign-up__form{
+    margin: 2px 15px 0;
+  }
+
+  .form__formfield:nth-child(2){
+    margin-top: 23px;
+  }
+
+  .formfield__label{
+    letter-spacing: -1px;
+  }
+
+  .file{
+    margin-top: -8px;
+  }
+
+}
 
 
 
