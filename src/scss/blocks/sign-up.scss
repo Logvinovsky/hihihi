@@ -1,5 +1,5 @@
 .sign-up .section{
-  padding-top: 143px;
+  padding-top: 145px;
 }
 
 .sign-up__container {
@@ -10,7 +10,7 @@
 .sign-up__form{
   display: flex;
   flex-direction: column;
-  margin: 10px 22px 0;
+  margin: 5px 22px 0;
 }
 
 .form__formfield{
@@ -136,7 +136,7 @@
 }
 
 .sign-up__button{
-  margin: 40px auto 0;
+  margin: 28px auto 0;
   width: 210px;
   cursor: pointer;
 }
@@ -165,7 +165,13 @@
 
 }
 
+@media  (min-width: 361px) and (max-width: 768px){
+  .sign-up .section{
+    padding-top: 116px;
+    padding-bottom: 80px;
+  }
 
-
-
-
+  .form__formfield{
+    margin-top: 15px;
+  }
+}
