@@ -25,6 +25,10 @@ body{
   margin: 0 30px;
 }
 
+.logo{
+  z-index: 1000;
+}
+
 .nav__link{
   color: #212529;
   font-size: 14px;
@@ -32,8 +36,12 @@ body{
   line-height: 60px;
   text-decoration: none;
   margin-left: 25px;
+    &:active{
+      color: var(--blue);
+    }
+
     &:hover{
-      color: #ef5b4c;
+      color: var(--red);
     }
 }
 
@@ -49,9 +57,9 @@ body{
   display: none;
 }
 
-@media screen and (max-width: 360px){
+@media (min-width: 320px) and (max-width: 415px){
   .container{
-    max-width: 360px;
+    max-width: 100%;
   }
 
   .header__container{
@@ -61,7 +69,6 @@ body{
 
   .logo{
     margin-top: 5px;
-    z-index: 1;
   }
 
   .header__menu-icon{

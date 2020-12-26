@@ -84,6 +84,8 @@
             We kindly remind you that your test
             assignment should be submitted as a link to
             github/bitbucket repository.
+            <span class = 'banner__description-551px'>Please be patient, we consider
+            and respond to every application that meets minimum requirements.</span>
         </p>
 
         <div class="banner__button">
@@ -283,25 +285,33 @@
 
                 <div class="form__formfield">
                     <label for='form__username' class='formfield__label'> Name </label>
-                    <input class = 'formfield__input'  type="text" placeholder="Your name" id='form__username' name='username'>
+                    <input class = 'formfield__input'  type="text" placeholder="Your name" id='form__username'
+                           name='username' required
+                           pattern = '[A-Z]{1}[a-z]{0,}' maxlength="16">
+                    <span class="formfield__error-text">Error</span>
                 </div>
 
                 <div class="form__formfield">
                     <label for='form__email' class='formfield__label'> Email</label>
-                    <input class = 'formfield__input' type="text" placeholder="Your email" id='form__email' name='email'>
+                    <input class = 'formfield__input' type="email" placeholder="Your email" id='form__email'
+                           name='email' required>
+                    <span class="formfield__error-text">Error</span>
                 </div>
 
                 <div class="form__formfield">
                     <label for='form__number' class='formfield__label'>Phone number</label>
-                    <input class = 'formfield__input' type="text" placeholder="+380 XX XXX XX XX" id='form__number' name='number'>
-                    <span class='number__assistive-text'>Enter a phone number in international format</span>
+                    <input class = 'formfield__input' type="tel" placeholder="+380 XX XXX XX XX"
+                           id='form__number' name='number' pattern = '+^[ 0-9]+$' required
+                            minlength="12" maxlength="13">
+                    <span class='formfield__assistive-text'>Enter a phone number in international format</span>
+                    <span class="formfield__error-text">Error</span>
                 </div>
 
                 <div class="form__formfield">
                     <span class='formfield__label'>Select your position</span>
                     <div class='radio-buttons'>
                         <div class="radio-button">
-                            <input type="radio" class='radio-button__input' id='positionChoice1' name='position'>
+                            <input type="radio" class='radio-button__input' id='positionChoice1' name='position' required>
                             <span class="radio-button__circle"></span>
                             <label class='radio-button__label' for="positionChoice1">Frontend developer</label>
                         </div>
@@ -313,7 +323,7 @@
                         </div>
 
                         <div class="radio-button">
-                            <input type="radio" class='radio-button__input' id='positionChoice3' name='position'>
+                            <input type="radio" class='radio-button__input' id='positionChoice3' name='position' >
                             <span class="radio-button__circle"></span>
                             <label class='radio-button__label' for='positionChoice3'>Designer</label>
                         </div>
@@ -329,8 +339,9 @@
                 <div class="form__formfield">
                     <div class="file">
                         <span class='formfield__label'> Photo </span>
-                        <input class='file__input' type="file" id='form__photo' name='photo'>
+                        <input class='file__input' type="file" id='form__photo' name='photo' required>
                         <label class='file-custom formfield__input' for="form__photo"></label>
+                        <span class="formfield__error-text">Error</span>
                     </div>
                 </div>
 

@@ -45,7 +45,7 @@
   margin: 33px auto 0;
 }
 
-@media screen and (max-width: 360px){
+@media (min-width: 320px) and (max-width: 551px){
   .users .section{
     padding-top: 82px;
   }
@@ -83,7 +83,7 @@
   }
 }
 
-@media  (min-width: 361px) and (max-width: 768px){
+@media  (min-width: 551px) and (max-width: 768px){
   .users .section{
     padding-top: 115px;
   }
@@ -92,11 +92,17 @@
     margin: 0 24px;
   }
 
-  .contact-block:nth-child(n + 4){
-    margin-top: 57px;
+  .contact-block:nth-child(n + 3){
+    margin-top: 20px;
   }
 
   .users__button{
     margin-top: 40px;
+  }
+}
+
+@media  (min-width: 769px){
+  .contact-block:nth-child(n + 3){
+    margin-top: 20px;
   }
 }

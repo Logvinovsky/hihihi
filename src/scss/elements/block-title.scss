@@ -16,7 +16,7 @@
   margin-top: 10px;
 }
 
-@media screen and (max-width: 360px) {
+@media (min-width: 320px) and (max-width: 551px) {
   .block-title__heading {
     font-size: 30px;
   }
@@ -26,7 +26,7 @@
   }
 }
 
-@media  (min-width: 361px) and (max-width: 768px){
+@media  (min-width: 551px) and (max-width: 768px){
   .block-title__heading {
     font-size: 40px;
   }
