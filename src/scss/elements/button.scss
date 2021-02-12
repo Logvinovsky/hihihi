@@ -1,0 +1,21 @@
+.button__link{
+  color: #fefefe;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.button{
+  display: block;
+  width: 210px;
+  line-height: 38px;
+  border-radius: 4px;
+  background-color: var(--red);
+  text-align: center;
+  border: none;
+    &:hover{
+      background-color: var(--dark-red);
+      border: none;
+  }
+}
+

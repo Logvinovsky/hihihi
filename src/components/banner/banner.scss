@@ -1,0 +1,159 @@
+.container{
+  max-width: 1024px;
+}
+
+.banner{
+  height: 600px;
+  background-image: url("../../images/banner-photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner__container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.banner__heading{
+  width: 56%;
+  color: #ffffff;
+  font-size: 49px;
+  font-weight: 400;
+  line-height: 54px;
+  text-transform: uppercase;
+  margin: 10.6% 0 0 1px;
+}
+
+.banner__description{
+  margin: 26px 0 0;
+  max-width: 530px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.banner__button{
+  margin: 34px 0 0;
+}
+
+.banner__description-mobile{
+  display: none;
+}
+
+@media  (min-width: 320px) and (max-width: 550.5px){
+
+  .banner{
+    height: 400px;
+    background-size: cover;
+    background-position-x: 52%;
+    background-image: url("../../images/banner-photo-768.jpg");
+  }
+  .banner__container{
+    margin: 0;
+    align-items: center;
+  }
+
+  .banner__heading {
+    margin: 70px 0 0;
+    font-size: 30px;
+    line-height: 34px;
+    min-width: 87%;
+    text-align: center;
+  }
+
+  .banner__description{
+    display: none;
+  }
+
+
+.banner__description-mobile{
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 20px 0 0;
+  text-align: center;
+  max-width: 92%;
+  display: block;
+}
+
+  .banner__description-551px{
+    display: none;
+  }
+
+.banner__button{
+  min-width: 210px;
+  margin: 24px 0 0;
+}
+
+}
+
+@media  (min-width: 448px) and (max-width: 551px){
+  .banner__description-551px{
+    display: block;
+  }
+}
+
+@media  (min-width: 551px) and (max-width: 768px){
+
+  .banner{
+    background-image: url("../../images/banner-photo-768.jpg");
+    height: 500px;
+    background-size: 134%;
+  }
+
+  .banner__heading {
+    width: 59%;
+    font-size: 40px;
+    line-height: 44px;
+    margin: 8% 0 0 -1px;
+  }
+
+  .banner__description{
+    width: 61%;
+    margin-top: 28px;
+  }
+
+}
+
+@media  (min-width: 769px) and (max-width: 853px){
+  .banner__heading{
+    min-width: 66%;
+  }
+}
+
+@media  (min-width: 550px) and (max-width: 767px) {
+
+  .banner__container{
+    align-items: center;
+    margin: 0;
+  }
+
+  .banner__heading{
+    text-align: center;
+    width: 90%;
+  }
+
+  .banner__description{
+    text-align: center;
+    width: 90%;
+  }
+}
+
+@media  (min-width: 415px) and (max-width: 582px) {
+  .banner__container{
+    align-items: center;
+    margin: 0;
+  }
+  .banner__heading{
+    text-align: center;
+    width: 90%;
+  }
+
+  .banner__description{
+    text-align: center;
+    width: 90%;
+  }
+}
