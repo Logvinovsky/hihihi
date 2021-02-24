@@ -15,10 +15,11 @@ function Content() {
                 (gulp/webpack) you will get bonus points as well. Slice service directory
                 page P​SD mockup​ into HTML5/CSS3.
             </p>
-
-            <a href="#" className="about-me__link">Sing up now</a>
+            <div className="about-me__link">
+                <a href="#" className="about-me__link">Sing up now</a>
+            </div>
         </>
-);
+    );
 }
 
 export default Content;

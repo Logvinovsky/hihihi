@@ -1,7 +1,9 @@
 import './about-me.scss';
 import BlockTitle from "../block-title";
-import AboutMeImg from "./image";
+//import AboutMeImg from "./image";
 import Content from "./content";
+import img from "../../images/man-laptop-v1.svg";
+
 
 function AboutMe(props) {
     return (
@@ -14,7 +16,7 @@ function AboutMe(props) {
 
             <div className="about-me__container">
                 <div className="about-me__image">
-                    <AboutMeImg/>
+                    <img src = {img} alt="man-laptop"/>
                 </div>
 
                 <div className="about-me__content">
