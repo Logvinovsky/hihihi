@@ -13,15 +13,17 @@
   margin: 5px 22px 0;
 }
 
-.form__formfield{
+.formfield{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .formfield__label{
   line-height: 28px;
 }
+
+
 
 .formfield__input{
   display: block;
@@ -36,26 +38,54 @@
       line-height: 28px;
     }
 
+  //&:focus {
+  //  border: 1px solid var(--blue);
+  //  box-shadow: 0 0 5px 0.5px var(--blue);
+  //}
+  //
+  //
+  //&:invalid:not(:placeholder-shown):required{
+  //    border: 1px solid var(--red);
+  //
+  //
+  //  &:focus{
+  //    box-shadow: 0 0 5px 0.5px var(--red);
+  //  }
+  //
+  //  ~.formfield__error-text{
+  //    display: block;
+  //  }
+  //  ~.formfield__assistive-text{
+  //    display: none;
+  //  }
+  //}
+}
+
+
+
+.formfield__input_focused {
   &:focus {
     border: 1px solid var(--blue);
     box-shadow: 0 0 5px 0.5px var(--blue);
   }
+}
 
-  &:invalid:not(:placeholder-shown):required{
-      border: 1px solid var(--red);
+.formfield__input_invalid {
+  border: 1px solid var(--red);
 
-
-    &:focus{
-      box-shadow: 0 0 5px 0.5px var(--red);
-    }
-
-    ~.formfield__error-text{
-      display: block;
-    }
-    ~.formfield__assistive-text{
-      display: none;
-    }
+  &:focus {
+    box-shadow: 0 0 5px 0.5px var(--red);
   }
+}
+
+.input__error{
+  color: red;
+  font-size: 12px;
+  opacity: 0;
+}
+
+.input__error_active{
+  opacity: 1;
 }
 
 .formfield__error-text{
@@ -74,7 +104,7 @@
 .radio-buttons{
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  //margin-top: 5px;
 }
 
 .radio-button{
@@ -173,6 +203,7 @@
 }
 
 
+
 @media (min-width: 320px) and (max-width: 414px){
   .sign-up .section{
     padding-top: 84px;
@@ -186,7 +217,7 @@
     margin: 2px 15px 0;
   }
 
-  .form__formfield:nth-child(2){
+  .formfield:nth-child(2){
     margin-top: 23px;
   }
 
@@ -205,7 +236,7 @@
     padding-bottom: 80px;
   }
 
-  .form__formfield{
+  .formfield{
     margin-top: 15px;
   }
 }

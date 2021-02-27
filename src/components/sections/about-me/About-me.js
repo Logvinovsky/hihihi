@@ -1,8 +1,7 @@
 import './about-me.scss';
-import BlockTitle from "../block-title";
-//import AboutMeImg from "./image";
-import Content from "./content";
-import img from "../../images/man-laptop-v1.svg";
+import BlockTitle from "../../reusable/Block-title";
+import Content from "./Content";
+import img from "../../../images/man-laptop-v1.svg";
 
 
 function AboutMe(props) {

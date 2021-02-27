@@ -1,10 +1,10 @@
 import React from "react";
 import clsx from "clsx";
 import './header.scss';
-import logo from '../../images/logo.svg';
-import Nav from './nav.js';
-import Menu from "./hamburger";
-import menuicon from "../../images/menuicon.svg";
+import logo from '../../../images/logo.svg';
+import Nav from './Nav.js';
+import Menu from "./Hamburger";
+import menuicon from "../../../images/menuicon.svg";
 
 
 class Header extends React.Component {

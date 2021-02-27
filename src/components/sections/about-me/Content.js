@@ -1,4 +1,4 @@
-function Content() {
+export default function Content() {
     return (
         <>
             <h3 className="about-me__subheading">
@@ -16,10 +16,9 @@ function Content() {
                 page P​SD mockup​ into HTML5/CSS3.
             </p>
             <div className="about-me__link">
-                <a href="#" className="about-me__link">Sing up now</a>
+                <a href="#registration" className="about-me__link">Sing up now</a>
             </div>
         </>
     );
 }
 
-export default Content;

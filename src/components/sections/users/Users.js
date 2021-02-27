@@ -1,9 +1,9 @@
 import React from 'react';
 import './users.scss';
 import users from './users-list.json';
-import BlockTitle from "../block-title";
-import Button from "../button";
-import ContactBlock from "./contact-block";
+import BlockTitle from "../../reusable/Block-title";
+import Button from "../../reusable/Button";
+import ContactBlock from "./Contact-block";
 
 export default class Users extends React.Component {
     constructor(props) {

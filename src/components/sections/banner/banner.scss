@@ -4,7 +4,7 @@
 
 .banner{
   height: 600px;
-  background-image: url("../../images/banner-photo.jpg");
+  background-image: url("../../../images/banner-photo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -48,7 +48,7 @@
     height: 400px;
     background-size: cover;
     background-position-x: 52%;
-    background-image: url("../../images/banner-photo-768.jpg");
+    background-image: url("../../../images/banner-photo-768.jpg");
   }
   .banner__container{
     margin: 0;
@@ -99,7 +99,7 @@
 @media  (min-width: 551px) and (max-width: 768px){
 
   .banner{
-    background-image: url("../../images/banner-photo-768.jpg");
+    background-image: url("../../../images/banner-photo-768.jpg");
     height: 500px;
     background-size: 134%;
   }

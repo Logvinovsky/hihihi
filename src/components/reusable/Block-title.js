@@ -1,4 +1,4 @@
-import "../scss/elements/block-title.scss";
+import "../../scss/elements/block-title.scss";
 
 function BlockTitle(props) {
     return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import "./banner.scss";
-import Heading from "./heading";
-import Description from "./description";
-import Button from "../button";
+import Heading from "./Heading";
+import Description from "./Description";
+import Button from "../../reusable/Button";
 
 class Banner extends React.Component {
     render() {
@@ -12,7 +12,7 @@ class Banner extends React.Component {
                         <Heading/>
                         <Description/>
                         <div className="banner__button">
-                            <Button href='#' text='Sign up now'/>
+                            <Button href='#registration' text='Sign up now'/>
                         </div>
                     </div>
                 </div>
