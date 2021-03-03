@@ -3,7 +3,10 @@ import './users.scss';
 import users from './users-list.json';
 import BlockTitle from "../../reusable/Block-title";
 import Button from "../../reusable/Button";
-import ContactBlock from "./Contact-block";
+import ContactBlocks from "./Contact-blocks";
+import ScrollableAnchor from 'react-scrollable-anchor';
+import {configureAnchors} from 'react-scrollable-anchor'
+configureAnchors({offset: -60, scrollDuration: 800});
 
 export default class Users extends React.Component {
     constructor(props) {
@@ -16,23 +19,25 @@ export default class Users extends React.Component {
 
     render() {
         return (
-            <div className='users'>
-                <div className="container section">
-                    <BlockTitle heading='Our cheerful users'
-                                subheading='Attention! Sorting users by registration date'
-                    />
-
-                    <div className="users__content">
-                        <ContactBlock users = {this.state.users}/>
-                    </div>
-
-                    <div className="users__button">
-                        <Button href='#'
-                                text='Show more'
+            <ScrollableAnchor id={'users'}>
+                <div className='users'>
+                    <div className="container section">
+                        <BlockTitle heading='Our cheerful users'
+                                    subheading='Attention! Sorting users by registration date'
                         />
+
+                        <div className="users__content">
+                            <ContactBlocks users={this.state.users}/>
+                        </div>
+
+                        <div className="users__button">
+                            <Button href='#'
+                                    text='Show more'
+                            />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </ScrollableAnchor>
         )
     }
 }

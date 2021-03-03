@@ -1,9 +1,12 @@
 import photo from '../../../images/photo-cover.png'
 
-export default function ContactBlocks(props){
-    return(
+export default function ContactBlocks(props) {
+    return (
         props.users.map(user => {
-            return(
+            let mailLimited = user.email.slice(0, 25);
+            if (user.email.length >= 25) mailLimited += '...';
+
+            return (
                 <div className='contact-block'>
                     <div className="contact-block__avatar">
                         <img src={photo} alt="avatar"/>
@@ -17,9 +20,15 @@ export default function ContactBlocks(props){
                         <div>
                             {user.position}
                         </div>
-                        <div>
-                            {user.mail}
+
+                        <div className={'email'}>
+                            {mailLimited}
+
+                            <div className="email_hover">
+                                {user.email}
+                            </div>
                         </div>
+
                         <div>
                             {user.number}
                         </div>

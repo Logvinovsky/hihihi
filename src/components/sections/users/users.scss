@@ -40,6 +40,29 @@
   margin-top: 11px;
 }
 
+.email{
+  position: relative;
+   &:hover{
+     cursor: pointer;
+     .email_hover{
+       display: block;
+     }
+   }
+}
+
+.email_hover{
+  position: absolute;
+  background-color: black;
+  width: 270px;
+  border-radius: 4px;
+  opacity: 0.65;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  display: none;
+}
+
 .users__button .button{
   margin: 33px auto 0;
 }

@@ -4,19 +4,40 @@ import AboutMe from "./components/sections/about-me/About-me";
 import Users from "./components/sections/users/Users";
 import SignUp from "./components/sections/sign-up/Sign-up";
 import Footer from "./components/sections/footer/Footer";
+import clsx from "clsx";
+import React from 'react';
 
-function App() {
 
-    return (
-        <>
-            <Header/>
-            <Banner/>
-            <AboutMe/>
-            <Users/>
-            <SignUp/>
-            <Footer/>
-        </>
-    );
+export default class App extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            hamburgerOpened: false,
+        }
+
+        this.change = this.change.bind(this);
+    }
+
+    change() {
+        this.setState({
+            hamburgerOpened: !this.state.hamburgerOpened,
+        })
+    }
+
+    render() {
+        return (
+            <>
+                <Header govnoebanoe={this.change}/>
+                <div className={clsx('', this.state.hamburgerOpened && 'background-cover')}>
+                    <Banner/>
+                    <AboutMe/>
+                    <Users/>
+                    <SignUp/>
+                    <Footer/>
+                </div>
+            </>
+        );
+    }
 }
 
-export default App;

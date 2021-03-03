@@ -1,12 +1,12 @@
 import menuicon from '../../images/menuicon.svg';
 
-function HeaderIcon(){
+export default function HeaderIcon() {
+    return (
 
-    return(
-        <a href="#" >
-            <img src={menuicon} alt="menu icon"/>
-        </a>
+            <button>
+                <img src={menuicon} alt="menu icon"/>
+            </button>
+
     )
 }
 
-export default HeaderIcon;
