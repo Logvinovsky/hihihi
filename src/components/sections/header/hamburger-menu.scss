@@ -1,7 +1,8 @@
 .hamburger-menu{
   width: 290px;
-  min-height: 800px;
+  height: 100vh;
   background: linear-gradient(red, orange, yellow, green, blue, purple);
+  //background-color: #fff;
   opacity: 1;
   position: absolute;
   top: 0;
@@ -10,9 +11,17 @@
   z-index: 501;
   transition: 0.6s;
 }
+.menu_scroll{
+  position: relative;
+  height: 90vh  ;
+  overflow: scroll;
+}
+.body_hidden{
+  overflow: hidden;
+}
 
 .background-cover{
-  position: fixed;
+  //position: fixed;
   z-index: 10;
 }
 

@@ -26,17 +26,17 @@ export default class SignUp extends React.Component {
             position: '',
             formValid: false,
 
-            errors: {
-                username: "Name can't be empty",
-                email: "Email can't be empty",
-                number: "Number can't be empty",
-            },
-
-            dirty: {
-                username: false,
-                email: false,
-                number: false,
-            }
+            // errors: {
+            //     username: "Name can't be empty",
+            //     email: "Email can't be empty",
+            //     number: "Number can't be empty",
+            // },
+            //
+            // dirty: {
+            //     username: false,
+            //     email: false,
+            //     number: false,
+            // }
 
         }
 
@@ -98,8 +98,6 @@ export default class SignUp extends React.Component {
 
 
     handleBlur(event) {
-
-
         switch (event.target.name) {
             case 'username':
                 this.setState({usernameDirty: true});
@@ -153,8 +151,8 @@ export default class SignUp extends React.Component {
                                        onChange={this.handleChange}
                                        onBlur={this.handleBlur}
                                        maxLength={16}
-                                       dirty={this.state.dirty.username}
-                                       error={this.state.errors.username}
+                                       dirty={this.state.usernameDirty}
+                                       error={this.state.usernameError}
                                 />
 
                                 <Input type='email'
@@ -164,8 +162,8 @@ export default class SignUp extends React.Component {
                                        value={this.state.email}
                                        onChange={this.handleChange}
                                        onBlur={this.handleBlur}
-                                       dirty={this.state.dirty.email}
-                                       error={this.state.errors.email}
+                                       dirty={this.state.emailDirty}
+                                       error={this.state.emailError}
                                 />
 
                                 <Input type='tel'
@@ -177,9 +175,9 @@ export default class SignUp extends React.Component {
                                        value={this.state.number}
                                        onChange={this.handleChange}
                                        onBlur={this.handleBlur}
-                                       dirty={this.state.dirty.number}
-                                       error={this.state.errors.number}
-                                    //   assistive='Enter a phone number in international format'
+                                       dirty={this.state.numberDirty}
+                                       error={this.state.numberError}
+                                       //assistive='Enter a phone number in international format'
                                 />
 
                                 <RadioButton options={positions}

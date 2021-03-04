@@ -19,25 +19,49 @@ export default class Header extends React.Component {
         this.openBurger = this.openBurger.bind(this);
     }
 
+    componentDidMount() {//я уверен, что этот код нужно писать не здесь,АРТЕМ ПОМОГИИ ОБЪЯСНИ
+        const menu = document.querySelector('.hamburger-menu');
+        const body = document.querySelector('body');
+
+        menu.addEventListener('click', (e) => {
+            const target = e.target;
+
+            if (!target.closest('a')) {
+                return false;
+            }
+
+            menu.classList.toggle('hamburger-menu_active');
+            this.setState({isActive: !this.state.isActive,});
+            if (body.className === 'body_hidden') body.classList.toggle('body_hidden');
+        })
+
+        window.addEventListener('click', (e) => {
+            if (this.state.isActive) {
+                if (!e.target.closest('header')) {
+                    menu.classList.toggle('hamburger-menu_active');
+                    this.setState({isActive: !this.state.isActive});
+                    body.classList.toggle('body_hidden');
+                }
+            }
+        });
+    }
+
     openBurger(event) {
         event.preventDefault();
         this.setState({
             isActive: !this.state.isActive,
         });
-        this.props.govnoebanoe();
+
+        const body = document.querySelector('body');
+        body.classList.toggle('body_hidden');
     }
 
     render() {
         return (
-
             <header className="header container">
-                {/*<StickyHeader backgroundColor='white'*/}
-                {/*              headerOnly={true}*/}
-                {/*              //className = 'header__container'*/}
-                {/*              header={*/}
                 <div className="header__container">
                     <div className="logo">
-                        <a href="#">
+                        <a href={"#home"}>
                             <img src={logo} alt="logo"/>
                         </a>
                     </div>
@@ -51,22 +75,17 @@ export default class Header extends React.Component {
                     <div className={clsx("hamburger-menu",
                         this.state.isActive && 'hamburger-menu_active')}>
                         <div className="menu__content">
-                            <Hamburger/>
+                            <div className="menu_scroll">
+                                <Hamburger/>
+                            </div>
                         </div>
                     </div>
-
 
                     <nav className="nav">
                         <Nav/>
                     </nav>
-
                 </div>
-                {/*}>*/}
-
-                {/*</StickyHeader>*/}
             </header>
-
-
         );
     }
 }

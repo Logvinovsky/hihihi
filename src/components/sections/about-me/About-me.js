@@ -6,7 +6,6 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import { configureAnchors } from 'react-scrollable-anchor'
 configureAnchors({offset: -60, scrollDuration: 800});
 
-
 export default function AboutMe(props) {
     return (
         <ScrollableAnchor id={'about-me'}>

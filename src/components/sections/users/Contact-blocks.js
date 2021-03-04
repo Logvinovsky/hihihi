@@ -7,7 +7,7 @@ export default function ContactBlocks(props) {
             if (user.email.length >= 25) mailLimited += '...';
 
             return (
-                <div className='contact-block'>
+                <div className='contact-block' key = {user.name}>
                     <div className="contact-block__avatar">
                         <img src={photo} alt="avatar"/>
                     </div>

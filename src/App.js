@@ -9,33 +9,35 @@ import React from 'react';
 
 
 export default class App extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            hamburgerOpened: false,
-        }
-
-        this.change = this.change.bind(this);
-    }
-
-    change() {
-        this.setState({
-            hamburgerOpened: !this.state.hamburgerOpened,
-        })
-    }
+    // constructor(props) {
+    //     super(props);
+    //
+    //     this.state = {
+    //         hamburgerOpened: false,
+    //     }
+    //
+    //     this.change = this.change.bind(this);
+    // }
+    //
+    // change() {
+    //     this.setState({
+    //         hamburgerOpened: !this.state.hamburgerOpened,
+    //     })
+    // }
 
     render() {
         return (
             <>
-                <Header govnoebanoe={this.change}/>
-                <div className={clsx('', this.state.hamburgerOpened && 'background-cover')}>
-                    <Banner/>
+                <Header/>
+                {/*<div className={clsx('', this.state.hamburgerOpened && 'background-cover')}>*/}
+                {/* <div className={'stop'}>*/}
+                     <Banner/>
                     <AboutMe/>
                     <Users/>
                     <SignUp/>
                     <Footer/>
-                </div>
+                {/* </div>*/}
+                {/*</div>*/}
             </>
         );
     }

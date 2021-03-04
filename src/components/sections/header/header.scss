@@ -58,7 +58,7 @@
   }
 
   .header__container{
-    min-height: 40px;
+   // min-height: 40px;
     margin: 0 15px;
   }
 
@@ -67,7 +67,7 @@
   }
 
   .header__menu-icon{
-    margin-top: 4px;
+    margin-top: 8px;
     display: block;
   }
 
@@ -76,6 +76,9 @@
     display: none;
   }
 
+  .menu-content__block:nth-child(1){
+    margin-top: 20px;
+  }
 
 }
 
