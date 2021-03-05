@@ -17,11 +17,11 @@ export default class Header extends React.Component {
         }
 
         this.openBurger = this.openBurger.bind(this);
+        this.closeBurger = this.closeBurger.bind(this);
     }
 
     componentDidMount() {//я уверен, что этот код нужно писать не здесь,АРТЕМ ПОМОГИИ ОБЪЯСНИ
         const menu = document.querySelector('.hamburger-menu');
-        const body = document.querySelector('body');
 
         menu.addEventListener('click', (e) => {
             const target = e.target;
@@ -30,20 +30,23 @@ export default class Header extends React.Component {
                 return false;
             }
 
-            menu.classList.toggle('hamburger-menu_active');
-            this.setState({isActive: !this.state.isActive,});
-            if (body.className === 'body_hidden') body.classList.toggle('body_hidden');
+            this.closeBurger();
         })
 
         window.addEventListener('click', (e) => {
             if (this.state.isActive) {
                 if (!e.target.closest('header')) {
-                    menu.classList.toggle('hamburger-menu_active');
-                    this.setState({isActive: !this.state.isActive});
-                    body.classList.toggle('body_hidden');
+                    this.closeBurger();
                 }
             }
         });
+    }
+
+    closeBurger() {
+        const body = document.querySelector('body');
+
+        this.setState({isActive: !this.state.isActive,});
+        if (body.className === 'body_hidden') body.classList.toggle('body_hidden');
     }
 
     openBurger(event) {
@@ -53,7 +56,14 @@ export default class Header extends React.Component {
         });
 
         const body = document.querySelector('body');
+        let scroll = document.querySelector('.menu_scroll');
         body.classList.toggle('body_hidden');
+
+        if (!this.state.isActive) {
+            setTimeout(() => {
+                scroll.scrollTop = 0;
+            }, 0);
+        }
     }
 
     render() {
