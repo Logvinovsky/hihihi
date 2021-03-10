@@ -1,10 +1,12 @@
 import React from 'react';
-import "./banner.scss";
+import ScrollableAnchor from 'react-scrollable-anchor';
+import {configureAnchors} from 'react-scrollable-anchor'
+
 import Heading from "./Heading";
 import Description from "./Description";
 import Button from "../../reusable/Button";
-import ScrollableAnchor from 'react-scrollable-anchor';
-import {configureAnchors} from 'react-scrollable-anchor'
+import "./Banner.scss";
+
 configureAnchors({offset: -60, scrollDuration: 800});
 
 class Banner extends React.Component {

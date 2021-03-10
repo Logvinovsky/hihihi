@@ -1,30 +1,17 @@
-import links from './nav-links.json';
-// function RenderLink(props) {
-//     return (
-//         <a href={props.href} className='nav__link'> {props.text} </a>
-//     );
-// }
+import links from "./Nav-links.json";
 
-function Nav() {
-
-    return (
-        links.map(link => {
-            return(
-                <a href={link.href} className={'nav__link'} key = {link.text}>
-                    {link.text}
-                </a>
-            )
-        })
-
-        // <>
-        //     <RenderLink href='#' text='About me'/>
-        //     <RenderLink href='#' text='Relationships'/>
-        //     <RenderLink href='#' text='Requirements'/>
-        //     <RenderLink href='#' text='Users'/>
-        //     <RenderLink href='#' text='Sign Up'/>
-        // </>
-
-    );
+export default function Nav() {
+  return (
+    <ul className="nav__ul">
+      {links.map((link) => {
+        return (
+          <li key={link.text}>
+            <a href={link.href} className={"nav__link"}>
+              {link.text}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  );
 }
-
-export default Nav;

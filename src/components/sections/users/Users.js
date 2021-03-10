@@ -1,11 +1,13 @@
 import React from 'react';
-import './users.scss';
-import users from './users-list.json';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import {configureAnchors} from 'react-scrollable-anchor'
+
+import './Users.scss';
+import users from './Users-list.json';
 import BlockTitle from "../../reusable/Block-title";
 import Button from "../../reusable/Button";
 import ContactBlocks from "./Contact-blocks";
-import ScrollableAnchor from 'react-scrollable-anchor';
-import {configureAnchors} from 'react-scrollable-anchor'
+
 configureAnchors({offset: -60, scrollDuration: 800});
 
 export default class Users extends React.Component {

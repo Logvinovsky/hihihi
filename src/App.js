@@ -1,11 +1,12 @@
-import Header from "./components/sections/header/Header";
-import Banner from "./components/sections/banner/Banner";
-import AboutMe from "./components/sections/about-me/About-me";
-import Users from "./components/sections/users/Users";
-import SignUp from "./components/sections/sign-up/Sign-up";
-import Footer from "./components/sections/footer/Footer";
-import clsx from "clsx";
 import React from 'react';
+// import clsx from "clsx";
+
+import Header from "./components/sections/Header/Header";
+import Banner from "./components/sections/Banner/Banner";
+import AboutMe from "./components/sections/AboutMe/AboutMe";
+import Users from "./components/sections/Users/Users";
+import SignUp from "./components/sections/SignUp/SignUp";
+import Footer from "./components/sections/Footer/Footer";
 
 
 export default class App extends React.Component {
